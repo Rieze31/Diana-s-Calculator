@@ -43,7 +43,7 @@ buttons.forEach(button => {
           inputField.value = message[count];
           count++;
         } else {
-          inputField.value = inputField.value.eval(inputField.value);
+          inputField.value = eval(inputField.value);
         }
       } catch (error) {
         inputField.value = "Error";
