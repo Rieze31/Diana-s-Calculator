@@ -42,7 +42,9 @@ buttons.forEach(button => {
         } else if (count == 6) {
           inputField.value = message[count];
           count++;
-        } 
+        } else {
+          inputField.value = inputField.value.eval(inputField.value);
+        }
       } catch (error) {
         inputField.value = "Error";
       }
