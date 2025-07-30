@@ -6,6 +6,17 @@ let inputField = document.querySelector("#display");
 let memory = 0;
 let memoryLabel = document.querySelector("#memory");
 let justEvaluated = false;
+let count = 0;
+let message = [
+    "Hi Diana!...",
+    "Ang ganda mo sobra haahhaha 😁😁...",
+    "Goodluck satin this school year kakayanin natin to...",
+    "Wag mo kalimutan buldak natin ah eme WHAHAHAHA...",
+    "Laro tau rolbokss WHAHAHHA joke lng pasukan na...",
+    "Sana matupad mga wish mo",
+    "Thank Youu sayo ng maramiii...",
+    "Have a great day Diana!❤❤",
+]
 buttons.forEach(button => {
 
   button.addEventListener("click", () => {
@@ -22,7 +33,34 @@ buttons.forEach(button => {
       inputField.value = "";
     } else if (clickedLetter === "=") {
       try {
-        inputField.value = eval(inputField.value);
+         if (count == 0) {
+          inputField.value = message[count];
+          count++;
+        } else if (count == 1) {
+          inputField.value = message[count];
+          
+          count++;
+        } else if (count == 2) {
+          inputField.value = message[count];
+          count++;
+        } else if (count == 3) {
+          inputField.value = message[count];
+          count++;
+        } else if (count == 4) {
+          inputField.value = message[count];
+          count++;
+        } else if (count == 5) {
+          inputField.value = message[count];
+          count++;
+        } else if (count == 6) {
+          inputField.value = message[count];
+          count++;
+        } else if (count == 7){
+          inputField.value = message[count];
+          count++;
+        } else {
+          inputField.value = eval(inputField.value);
+        }
       } catch (error) {
         inputField.value = "Error";
       }
